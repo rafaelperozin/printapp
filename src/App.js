@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { ThemeProvider } from './Context/ThemeContext';
+import { TemplatesProvider } from './Context/TemplatesContext';
+import { ModalProvider } from './Context/ModalContext';
+
+import Header from './Components/Layouts/Header';
+import MainContainer from './Components/Layouts/MainContainer';
+import TemplatesList from './Components/Templates/List';
+import Modal from './Components/Helpers/Modal';
+
+import './Styles/app.scss';
+
+const App = () => {
+
+    return (
+        <ThemeProvider>
+            <MainContainer>
+                <ModalProvider>
+                
+                    <Header />
+
+                    <TemplatesProvider>
+
+                        <main className="app__main">
+                            <div className="app__container">                            
+                                <TemplatesList />
+                            </div>
+                        </main>
+
+                        <Modal />
+
+                    </TemplatesProvider>
+                    
+                </ModalProvider>
+            </MainContainer>
+        </ThemeProvider>
+    );
 }
 
 export default App;

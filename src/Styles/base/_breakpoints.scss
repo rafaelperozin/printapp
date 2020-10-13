@@ -1,0 +1,85 @@
+// Breakpoints
+
+// Breakpoint Mixins
+// Usage: $device-name (string), breakpoint (integer), unit (string).
+
+// Usage: @include mobile{}
+@mixin mobile {
+    @media only screen and (min-width: #{$mobile}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include mobile-tablet{}
+@mixin mobile-tablet {
+    @media only screen and (min-width: #{$mobile}#{$unit}) and (max-width: #{$tablet}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include tablet{}
+@mixin tablet {
+    @media only screen and (min-width: #{$tablet}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include tablet-laptop{}
+@mixin tablet-laptop {
+    @media only screen and (min-width: #{$tablet}#{$unit}) and (max-width: #{$laptop}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include laptop{}
+@mixin laptop {
+    @media only screen and (min-width: #{$laptop}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include laptop-desktop{}
+@mixin laptop-desktop {
+    @media only screen and (min-width: #{$laptop}#{$unit}) and (max-width: #{$desktop}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include desktop{}
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include desktop-bigscreen{}
+@mixin desktop-bigscreen {
+    @media only screen and (min-width: #{$desktop}#{$unit}) and (max-width: #{$bigscreen}#{$unit}) {
+        @content;
+    }
+}
+
+// Usage: @include bigscreen{}
+@mixin bigscreen {
+    @media only screen and (min-width: #{$bigscreen}#{$unit}) {
+        @content;
+    }
+}
+
+
+// Browsers
+@mixin IE {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+    }
+}
+@mixin IOS {
+    @supports (-webkit-overflow-scrolling: touch) {
+        @content;
+    }
+}
+@mixin MS {
+    @supports (-ms-ime-align: auto) {
+        @content;
+    }
+}

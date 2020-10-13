@@ -1,0 +1,29 @@
+// BASE -------------------------------
+@import '../base/color',
+'../base/variables',
+'../base/typography',
+'../base/breakpoints';
+
+// HELPERS ----------------------------
+@import '../helpers/mixins';
+
+// Specific ---------------------------
+.header {
+    .header__container {
+        @include flex(unset, space-between, center, unset);
+
+        .header__logo {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    
+        .header__message {
+            font-size: .9rem;
+            margin: 0;
+    
+            .header__user {
+                font-size: inherit;
+            }
+        }
+    }
+}

@@ -1,3 +1,34 @@
+# Print Documents App
+
+**Stack & Packages**: React | SASS | Hooks | Context | Axios | JSON Server | JSPDF | React Hook Form
+
+### Components
+- Templates
+- Documents
+- Layouts: Header
+- Helpers: Modal
+- Helpers: Switcher (dark mode)
+
+
+# RUN THE APPLICATION LOCALLY
+To run the project on your machine follow this steps:
+1. **Clone** repository this
+2. **Install** the application
+    ```
+    $ yarn install
+    ```
+3. **Start the server**, that will run on the port 4000.
+    ```
+    $ yarn server
+    ```
+4. **Start the application**, that will run on port 3000.
+    ```
+    $ yarn start
+    ```
+
+
+# Default React Readme
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

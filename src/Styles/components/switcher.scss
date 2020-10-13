@@ -1,0 +1,18 @@
+// BASE -------------------------------
+@import '../base/color',
+'../base/variables',
+'../base/typography',
+'../base/breakpoints';
+
+// HELPERS ----------------------------
+@import '../helpers/mixins';
+
+// Specific ---------------------------
+.switcher {
+    @include flex(unset, unset, center, unset);
+    font-size: .9rem;
+
+    .switcher__toggler {
+        transform: scale(.8);
+    }
+}

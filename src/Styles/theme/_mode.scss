@@ -1,0 +1,91 @@
+.app {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+
+    &.app--light {
+        background-color: $white;
+        color: $darkergrey;
+    
+        .header {
+            background-color: $lightergrey;
+        }
+
+        .button__secondary--green {
+            border-color: $darkgreen;
+            color: $darkgreen;
+        }
+        .button__link--green {
+            color: $darkgreen;
+        }
+
+        .templates {
+            .template {
+                background-color: $lightergrey;
+            }
+        }
+
+        .modal {
+            .modal__box {
+                background-color: $white;
+            }
+        }
+
+        .form {
+            .form__label {
+                &.required {
+                    color: $darkred;
+                }
+            }
+            .form__input {
+                background-color: transparent;
+
+                &.required {
+                    border-color: $darkred;
+                }
+            }
+            .form__error {
+                color: $darkred;
+            }
+        }
+    }
+    
+    &.app--dark {
+        background-color: $black;
+        color: $lightgrey;
+    
+        .header {
+            background-color: $darkergrey;
+        }
+
+        .templates {
+            .template {
+                background-color: $darkergrey;
+            }
+        }
+
+        .modal {
+            .modal__box {
+                background-color: $black;
+            }
+        }
+
+        .form {
+            .form__label {
+                &.required {
+                    color: $lightred;
+                }
+            }
+            .form__input {
+                background-color: $darkergrey;
+
+                &.required {
+                    border-color: $lightred;
+                }
+            }
+            .form__error {
+                color: $lightred;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "templates": [
+        { 
+            "id": 1,
+            "title": "Terms",
+            "author": {
+                "id": 1,
+                "name": "Rafael Perozin"
+            },
+            "body": "Bonjour %user_name%, this is our terms of service valid only for %city%.",
+            "fields": [
+                {
+                    "id": 1,
+                    "variable": "%user_name%",
+                    "label": "Name",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "id": 2,
+                    "variable": "%city%",
+                    "label": "City",
+                    "type": "text",
+                    "required": 1
+                }
+            ],
+            "created": "2020-10-08 12:21:12",
+            "modified": "",
+            "documents": [
+                {
+                    "id": 1, 
+                    "body": "Bonjour Rafael Perozin, this is our terms of service.",
+                    "author": {
+                        "id": 1,
+                        "name": "Rafael Perozin"
+                    },
+                    "created": "2020-10-08 12:25:21"
+                },
+                {
+                    "id": 2, 
+                    "body": "Bonjour Scott Williams, this is our terms of service.",
+                    "author": {
+                        "id": 2,
+                        "name": "Scott Williams"
+                    },
+                    "created": "2020-10-08 12:22:13"
+                }
+            ]
+        },
+        { 
+            "id": 2,
+            "title": "Policy",
+            "author": {
+                "id": 1,
+                "name": "Rafael Perozin"
+            },
+            "body": "Bom dia %user_name%, this is our policies.",
+            "fields": [
+                {
+                    "id": 1,
+                    "variable": "%user_name%",
+                    "label": "Name",
+                    "type": "text",
+                    "required": 1
+                }
+            ],
+            "created": "2020-10-08 12:24:32",
+            "modified": "2020-10-08 12:26:12",
+            "documents": [
+                {
+                    "id": 3, 
+                    "body": "Bom dia Scott Williams, this is our policies.",
+                    "author": {
+                        "id": 2,
+                        "name": "Scott Williams"
+                    },
+                    "created": "2020-10-08 12:25:422"
+                }
+            ]
+        }
+    ],
+    "users": [
+        { 
+            "id": 1, 
+            "user": "rafaelperozin", 
+            "name": "Rafael Perozin", 
+            "type": "admin" 
+        },
+        { 
+            "id": 2, 
+            "user": "scottwilliams", 
+            "name": "Scott Williams", 
+            "type": "user" 
+        }
+    ]
+}

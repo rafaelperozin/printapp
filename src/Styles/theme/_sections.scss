@@ -1,0 +1,15 @@
+.app {
+    .app__header,
+    .app__main {
+        padding: 1rem;
+
+        .app__container {
+            width: 100%;
+            margin: 0 auto;
+            
+            @include laptop {
+                max-width: #{$laptop}#{$unit};
+            }
+        }
+    }
+}

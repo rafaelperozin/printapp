@@ -1,0 +1,81 @@
+@mixin flex($direction, $justify, $align, $wrap) {
+    display: flex;
+    @if ($direction !=unset) {
+        flex-direction: $direction;
+    }
+    @if ($justify !=unset) {
+        justify-content: $justify;
+    }
+    @if ($align !=unset) {
+        align-items: $align;
+    }
+    @if ($wrap !=unset) {
+        flex-wrap: $wrap;
+    }
+}
+
+@mixin grid($row, $column, $gap) {
+    display: grid;
+    grid-template-rows: $row;
+    grid-template-columns: $column;
+    grid-gap: $gap;
+}
+
+@mixin grid-child($row, $column) {
+    grid-row: $row;
+    grid-column: $column;
+}
+
+// use UNSET for each position that you won't declare
+@mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    @if ($top !=unset) {
+        top: $top;
+    }
+    @if ($right !=unset) {
+        right: $right;
+    }
+    @if ($bottom !=unset) {
+        bottom: $bottom;
+    }
+    @if ($left !=unset) {
+        left: $left;
+    }
+}
+
+@mixin middle-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin font-icon($family, $position, $icon-code, $top, $right, $bottom, $left) {
+    &:#{$position} {
+        @if ($family == 'fab') {
+            font-family: 'Font Awesome 5 Brands';
+            font-weight: 400;
+        } @else if ($family=='far') {
+            font-family: 'Font Awesome 5 Regular';
+            font-weight: 400;
+        } @else {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+        content: $icon-code;
+        position: absolute;
+        @if ($top != unset) {
+            top: $top;
+        }
+        @if ($right != unset) {
+            right: $right;
+        }
+        @if ($bottom != unset) {
+            bottom: $bottom;
+        }
+        @if ($left != unset) {
+            left: $left;
+        }
+        @content;
+    }
+}

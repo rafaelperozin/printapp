@@ -1,0 +1,86 @@
+// BASE -------------------------------
+@import '../base/color',
+'../base/variables',
+'../base/typography',
+'../base/breakpoints';
+
+// HELPERS ----------------------------
+@import '../helpers/mixins';
+
+// Specific ---------------------------
+.templates {
+
+    .templates__header {
+        @include flex(unset, space-between, center, unset);
+
+        .templates__title {
+            font-size: 1.2rem;
+        }
+    }
+    .templates__list {
+        list-style: none;
+        padding-left: 0;
+
+        .template {
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: $darkergrey;
+            margin-bottom: 1rem;
+
+            @include laptop {
+                @include flex(unset, space-between, center, nowrap);
+            }
+            .template__info {
+                @include laptop {
+                    @include flex(unset, flex-start, center, wrap);
+                }
+
+                .template__title {
+                    margin-top: 0;
+
+                    @include laptop {
+                        flex-basis: 100%;
+                    }
+                }
+
+                p {
+                    margin: .2rem 0;
+                    font-size: .85rem;
+
+                    &:last-child {
+                        margin-bottom: 1rem;
+                    }
+
+                    strong {
+                        font-size: inherit;
+                    }
+
+                    @include laptop {
+                        margin: 0 1rem 0 0;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .template__actions {
+                button {
+                    margin-right: 1rem;
+                }
+
+                @include laptop {
+                    @include flex(unset, unset, unset, unset);
+
+                    .template__view {
+                        order: 1;
+                    }
+                    .template__print {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}

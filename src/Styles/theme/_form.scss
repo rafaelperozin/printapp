@@ -1,0 +1,29 @@
+.form {
+    margin-top: 2.5rem;
+    .form__field {
+        border: none;
+        margin-bottom: 1rem;
+        padding: 0;
+        @include flex(unset, unset, center, wrap);
+
+        .form__label {
+            flex-basis: 25%;
+            text-align: left;
+        }
+        .form__input {
+            flex-grow: 1;
+            background-color: transparent;
+            border: 1px solid $midgrey;
+            border-radius: 3px;
+            height: 35px;
+        }
+        .form__error {
+            flex-basis: 100%;
+            margin-left: 25%;
+            font-size: .85rem;
+        }
+    }
+    .form__submit {
+        margin: 1rem 0 1rem 25%;
+    }
+}
